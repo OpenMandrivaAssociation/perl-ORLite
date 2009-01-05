@@ -1,5 +1,5 @@
 %define realname   ORLite
-%define version    0.15
+%define version    1.17
 %define release    %mkrel 1
 
 Name:       perl-%{realname}
