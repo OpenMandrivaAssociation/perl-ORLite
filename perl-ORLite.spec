@@ -8,18 +8,17 @@ Release:    %{release}
 License:    GPL or Artistic
 Group:      Development/Perl
 Summary:    Extremely light weight SQLite-specific ORM  
-Source:     http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/%realname-%version.tar.gz
 Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Source:     http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/%realname-%version.tar.gz
 BuildRequires: perl-devel
 BuildRequires: perl(Params::Util)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(DBD::SQLite)
 BuildRequires: perl(DBI)
-BuildRequires: perl(File::Temp)
+BuildRequires: perl(File::Temp) >= 0.20
 BuildRequires: perl(File::Spec)
-
 BuildArch: noarch
+BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
 Extremely light weight SQLite-specific ORM  
