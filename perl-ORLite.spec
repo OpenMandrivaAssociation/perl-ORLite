@@ -1,31 +1,32 @@
-%define realname   ORLite
-%define version    1.23
-%define release    %mkrel 2
+%define upstream_name    ORLite
+%define upstream_version 1.23
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Extremely light weight SQLite-specific ORM  
-Url:        http://search.cpan.org/dist/%{realname}
-Source:     http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/%realname-%version.tar.gz
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl-devel
 BuildRequires: perl(Params::Util)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(DBD::SQLite)
 BuildRequires: perl(DBI)
-BuildRequires: perl(File::Temp) >= 0.20
+BuildRequires: perl(File::Temp) >= 0.200.0
 BuildRequires: perl(File::Spec)
 BuildArch: noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Extremely light weight SQLite-specific ORM  
 
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
