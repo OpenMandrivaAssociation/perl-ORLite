@@ -1,5 +1,5 @@
 %define upstream_name    ORLite
-%define upstream_version 1.23
+%define upstream_version 1.25
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -23,7 +23,6 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Extremely light weight SQLite-specific ORM  
-
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
