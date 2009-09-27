@@ -11,13 +11,15 @@ Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires: perl-devel
-BuildRequires: perl(Params::Util)
-BuildRequires: perl(Test::More)
 BuildRequires: perl(DBD::SQLite)
 BuildRequires: perl(DBI)
-BuildRequires: perl(File::Temp) >= 0.200.0
+BuildRequires: perl(File::Remove)
 BuildRequires: perl(File::Spec)
+BuildRequires: perl(File::Temp) >= 0.200.0
+BuildRequires: perl(Params::Util)
+BuildRequires: perl(Test::More)
+BuildRequires: perl(Test::Script)
+
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
