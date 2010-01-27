@@ -17,6 +17,7 @@ BuildRequires: perl(File::Remove)
 BuildRequires: perl(File::Spec)
 BuildRequires: perl(File::Temp) >= 0.200.0
 BuildRequires: perl(Params::Util)
+BuildRequires: perl(Template::Tiny)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(Test::Script)
 
