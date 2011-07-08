@@ -1,9 +1,9 @@
 %define upstream_name    ORLite
-%define upstream_version 1.45
+%define upstream_version 1.50
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    Extremely light weight SQLite-specific ORM  
 License:    GPL+ or Artistic
@@ -12,12 +12,14 @@ Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires: perl(Class::XSAccessor)
-BuildRequires: perl(DBD::SQLite)
-BuildRequires: perl(DBI)
-BuildRequires: perl(File::Remove)
+BuildRequires: perl(DBD::SQLite) >= 1.270
+BuildRequires: perl(DBI) >= 1.607
+BuildRequires: perl(File::Basename)
+BuildRequires: perl(File::Path)
+BuildRequires: perl(File::Remove) >= 1.40
 BuildRequires: perl(File::Spec)
 BuildRequires: perl(File::Temp) >= 0.200.0
-BuildRequires: perl(Params::Util)
+BuildRequires: perl(Params::Util) >= 0.330.0
 BuildRequires: perl(Template::Tiny)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(Test::Script)
