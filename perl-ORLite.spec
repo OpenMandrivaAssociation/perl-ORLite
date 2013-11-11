@@ -1,5 +1,5 @@
 %define upstream_name    ORLite
-%define upstream_version 1.54
+%define upstream_version 1.98
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Summary:	Extremely light weight SQLite-specific ORM
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/ORLite-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Class::XSAccessor)
@@ -149,5 +149,6 @@ make test
 * Sat Aug 30 2008 Nicolas Lécureuil <nlecureuil@mandriva.com> 0.10-1mdv2009.0
 + Revision: 277675
 - import perl-ORLite
+
 
 
