@@ -1,15 +1,15 @@
 %define upstream_name    ORLite
-%define upstream_version 1.98
+%define upstream_version 2.00
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Extremely light weight SQLite-specific ORM
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/ORLite-%{upstream_version}.tar.gz
+Url:		https://github.com/karenetheridge/ORLite
+Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/ORLite-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
