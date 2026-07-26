@@ -1,15 +1,13 @@
 %define upstream_name    ORLite
-%define upstream_version 2.00
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	2.00
+Release:	2
 
 Summary:	Extremely light weight SQLite-specific ORM
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/karenetheridge/ORLite
-Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/ORLite-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/ORLite-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -32,7 +30,7 @@ BuildArch:	noarch
 Extremely light weight SQLite-specific ORM
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -116,8 +114,7 @@ make test
 
 * Fri Jul 17 2009 Jérôme Quelin <jquelin@mandriva.org> 1.230.0-1mdv2010.0
 + Revision: 396880
-- using %%perl_convert_version
-- fixed license field
+- using %2.00 fixed license field
 
 * Fri Jul 17 2009 Jérôme Quelin <jquelin@mandriva.org> 1.23-2mdv2010.0
 + Revision: 396753
